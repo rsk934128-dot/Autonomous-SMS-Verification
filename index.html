@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remix Remix TextVerified Hub - Autonomous SMS Verification</title>
+    <meta name="description" content="Autonomous SMS and OTP verification engine powered by TextVerified API v2 with real-time tracking, auto-refund safeguards, and cloud persistence." />
+    <meta property="og:title" content="Remix Remix TextVerified Hub - Autonomous SMS Verification" />
+    <meta property="og:description" content="Autonomous SMS and OTP verification engine powered by TextVerified API v2 with real-time tracking, auto-refund safeguards, and cloud persistence." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#10b981" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="TextVerified" />
+    <link rel="icon" type="image/svg+xml" href="/icon-192.svg" />
+    <link rel="apple-touch-icon" href="/icon-192.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-white">
+    <div id="root">
+      <div style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #020617; color: #f8fafc; font-family: system-ui, -apple-system, sans-serif; text-align: center; padding: 24px;">
+        <div style="width: 44px; height: 44px; border: 3px solid #1e293b; border-top-color: #10b981; border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 16px;"></div>
+        <h2 style="font-size: 18px; font-weight: 700; margin: 0 0 6px 0; letter-spacing: -0.02em;">Sheikh Farid Studio • লোড হচ্ছে...</h2>
+        <p style="font-size: 13px; color: #94a3b8; margin: 0; max-width: 320px;">Gemini AI App Builder এবং SMS Verification Hub প্রস্তুত হচ্ছে...</p>
+        <style>@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }</style>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Global error handler to catch unhandled script errors and show clear recovery UI
+      window.addEventListener('error', function(e) {
+        console.error('[Global App Error Caught]:', e);
+        var root = document.getElementById('root');
+        if (root && (!root.children.length || root.innerHTML.includes('লোড হচ্ছে'))) {
+          root.innerHTML = '<div style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #020617; color: #f8fafc; font-family: system-ui, sans-serif; text-align: center; padding: 24px;">' +
+            '<div style="background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.25); border-radius: 20px; padding: 28px; max-width: 500px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);">' +
+            '<div style="font-size: 32px; margin-bottom: 12px;">⚠️</div>' +
+            '<h2 style="font-size: 18px; font-weight: 700; color: #f87171; margin: 0 0 8px 0;">অ্যাপ লোডিংয়ে সাময়িক সমস্যা</h2>' +
+            '<p style="font-size: 13px; color: #cbd5e1; margin: 0 0 20px 0; line-height: 1.5;">ব্রাউজারের পুরানো ক্যাশ বা লোকাল স্টোরেজ কনফ্লিক্টের কারণে স্ক্রিন সাদা হতে পারে। নিচের বাটনে ক্লিক করে ফ্রেশ রিস্টার্ট করুন।</p>' +
+            '<button onclick="try{localStorage.clear();sessionStorage.clear();}catch(e){}if(\'serviceWorker\' in navigator){navigator.serviceWorker.getRegistrations().then(function(regs){regs.forEach(function(r){r.unregister();});});}location.reload(true);" style="padding: 12px 24px; background: linear-gradient(135deg, #4f46e5, #7c3aed); color: white; border: none; border-radius: 12px; font-weight: 700; font-size: 13px; cursor: pointer; box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.4);">ক্যাশ রিসেট ও রিলোড করুন</button>' +
+            '</div></div>';
+        }
+      });
+    </script>
+  </body>
+</html>
